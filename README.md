@@ -26,5 +26,5 @@ build command: pip install -r requirements.txt
 start command: gunicorn app:app  
 Deploy! Done!  
     
-### Thanks to my friend Bee Lan(达纳).  
+### Thanks to my friend natalieybl.  
 2024.8.17   
