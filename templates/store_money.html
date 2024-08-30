@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storage Money and Transfer Money v1</title>
+    <title>Storage Money v1</title>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
     <!-- Load Web3.js -->
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
@@ -61,14 +61,21 @@
 </head>
 <body>
     <div class="container">
-     <h2>Welcome to Store Money</h2>
+    <h2>Welcome to Store Money</h2>
     <input type="number" id="moneyInput" placeholder="Enter amount to store">
     <button class="btn" onclick="storeValue()">Store Value</button>
+    <br>
     <button class="btn" onclick="getValue()">Get Stored Value</button>
     <p id="storedValue"></p>
-    <p id="status"></p>
+    <!-- <p id="status"></p> -->
+    <form action="/" method="post">
+        <!-- <input type="submit" value="Main"> -->
+        <button class="btn">Main Menu</button>
+    </form>
     </div>
-    <script src=" https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+</body>
+
+<script src=" https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
     <script>
         if (typeof window.ethereum !== 'undefined') {
             window.web3 = new Web3(window.ethereum);
@@ -124,5 +131,4 @@ const web3 = new Web3(Web3.givenProvider);
             document.getElementById('storedValue').innerText = "Stored Value: " + storedValue;
         }
     </script>
-</body>
 </html>
