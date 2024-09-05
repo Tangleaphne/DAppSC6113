@@ -20,6 +20,10 @@ def main():
     conn.close()
     return render_template('main.html', r=r)
 
+@app.route('/backmain',methods=["get","post"])
+def backmain():
+    return render_template('main.html')
+
 @app.route('/admin',methods=["get","post"])
 def admin():
     return render_template('admin.html')

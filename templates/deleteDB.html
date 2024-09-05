@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Menu</title>
+    <title>Delete Database</title>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
     <!-- Load Web3.js -->
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0376c980;
+            background-color: #0060a580;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,14 +43,14 @@
             font-size: 16px;
         }
         button {
-            background-color: #0379ce;
+            background-color: #000000;
             color: white;
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #036db9;
+            background-color: #505050;
         }
         .output {
             text-align: center;
@@ -62,10 +62,15 @@
 
 <body>
 <div class="container">
-<h1>Delete Database</h1>
+<h2>Delete Database</h2>
 <br>
-<form action = "/" method="post">
-    <input type="submit" value="Main">
+<form action = "/admin" method="post">
+    <!-- <input type="submit" value="Main"> -->
+    <button class="btn">Back to Admin</button>
+</form>
+<form action = "/backmain" method="post">
+    <!-- <input type="submit" value="Main"> -->
+    <button class="btn">Main Menu</button>
 </form>
 <br> 
 </div>
