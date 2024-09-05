@@ -42,6 +42,16 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             font-size: 16px;
         }
+        input[type="text"], button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
         button {
             background-color: #0379ce;
             color: white;
@@ -63,11 +73,13 @@
 
 <body>
     <div class="container">
-        <h2>Welcome to DApp - Store and Transfer Money. May I know your name?</h2>
-        <br>
+        <h2>Welcome to DApp!</h2>
+        <h2>May I know your name?</h2>
         <form action="/main" method="post">
             <input type="text" name="q">
-            <input type="submit" value="Enter">
+            <!-- <input type="submit" value="Enter"> -->
+            <button class="btn">Enter</button>
         </form>
     </div>
 </body >
+</html>

@@ -61,21 +61,13 @@
 </head>
 
 <body>
-<div class="container">
-<h1>Hi {{r}} ! Welcome to DApp - Smartpay</h1>
-<br>
-<form action = "/store_money" method="post">
-    <!-- <input type="submit" value="Store Money"> -->
-    <button class="btn">Store Money</button>
-</form>
-<form action = "/transfer_money" method="post">
-    <!-- <input type="submit" value="Transfer Money"> -->
-    <button class="btn">Transfer Money</button>
-</form> 
-<form action = "/admin" method="post">
-    <!-- <input type="submit" value="Transfer Money"> -->
-    <button class="btn">Admin</button>
-</form>
+    <div class="container">
+        <h2>User Data</h2>
+        {{r}}
+        <br>
+        <form action = "/main" method="post">
+            <input type="submit" value="Main">
+        </form>
 </div>
 </body>
 </html>
