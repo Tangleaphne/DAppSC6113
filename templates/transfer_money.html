@@ -72,12 +72,12 @@
 
 <body>
 <div class="container">
+<h2>Hi {{role}} {{r}}</h2>
 <h2>Welcome to Transfer Money</h2>
-
 <input type="text" id="payer_id" placeholder="Please enter payer address">
 <input type="text" id="payee_id" placeholder="Please enter payee address">
 <input type="number" id="amount_id" placeholder="Please enter amount">
-<!-- <br> -->
+
 <button class="btn" onclick="transfer()">Transfer Money</button>
 <br>
 <button class="btn" onclick="view_transaction()">View Transaction</button>
@@ -87,7 +87,8 @@
 <p id="view_amount_id"></p>
 
 <form action="/backmain" method="post">
-	<!-- <input type="submit" value="Main"> -->
+	<input type="hidden" name="role" value="{{role}}">
+    <input type="hidden" name="q" value="{{r}}">
     <button class="btn">Main Menu</button>
 </form>
 </div>

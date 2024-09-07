@@ -64,14 +64,11 @@
     <div class="container">
         <h2>User Data</h2>
         <br>
-        {{r}}
+        {{t}}
         <br><br>
-        <form action = "/admin" method="post">
-            <!-- <input type="submit" value="Main"> -->
-            <button class="btn">Back to Admin</button>
-        </form>
         <form action = "/backmain" method="post">
-            <!-- <input type="submit" value="Main"> -->
+            <input type="hidden" name="role" value="{{role}}">
+            <input type="hidden" name="q" value="{{r}}">
             <button class="btn">Main Menu</button>
         </form>
 </div>

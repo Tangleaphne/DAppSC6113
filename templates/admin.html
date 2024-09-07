@@ -65,16 +65,21 @@
 <h1>Admin</h1>
 <br>
 <form action = "/viewDB" method="post">
-    <!-- <input type="submit" value="View Database"> -->
+    <input type="hidden" name="role" value="{{role}}">
+    <input type="hidden" name="q" value="{{r}}">
     <button class="btn">View Databas</button>
 </form>
 <form action = "/delDB" method="post">
-    <!-- <input type="submit" value="Delete Database"> -->
+    <input type="hidden" name="role" value="{{role}}">
+    <input type="hidden" name="q" value="{{r}}">
     <button class="btn">Delete Database</button>
 </form>
-<form action = "/backmain" method="post">
-    <!-- <input type="submit" value="Main"> -->
-    <button class="btn">Main Menu</button>
+<form action = "/role" method="post"></form>
+    <input type="hidden" name="q" value="{{r}}">
+    <button class="btn">Change Role Enter</button>
+</form>
+<form action = "/" method="post">
+    <button class="btn">Logout</button>
 </form>
 </div>
 </body>

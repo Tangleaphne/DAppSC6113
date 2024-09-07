@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
-    <!-- Load Web3.js -->
+    <title>Role Choice</title>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
-    <!-- Custom CSS -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -73,12 +70,21 @@
 
 <body>
     <div class="container">
-        <h2>Welcome to DApp!</h2>
-        <h2>May I know your name?</h2>
-        <form action="/role" method="post">
-            <input type="text" name="q">
-            <button class="btn">Enter</button>
+        <h1>Hi {{r}}!</h1>
+        <h2>Choose your role:</h2>
+        <form action="/main" method="post">
+            <input type="hidden" name="role" value="user">
+            <input type="hidden" name="q" value="{{r}}">
+            <button class="btn">User Enter</button>
+        </form>
+        <form action="/main" method="post">
+            <input type="hidden" name="role" value="admin">
+            <input type="hidden" name="q" value="{{r}}">
+            <button class="btn">Admin Enter</button>
+        </form>
+        <form action = "/" method="post">
+            <button class="btn">Logout</button>
         </form>
     </div>
-</body >
+</body>
 </html>

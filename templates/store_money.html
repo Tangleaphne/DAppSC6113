@@ -61,15 +61,16 @@
 </head>
 <body>
     <div class="container">
+    <h2>Hi {{role}} {{r}}</h2>
     <h2>Welcome to Store Money</h2>
     <input type="number" id="moneyInput" placeholder="Enter amount to store">
     <button class="btn" onclick="storeValue()">Store Value</button>
     <br>
     <button class="btn" onclick="getValue()">Get Stored Value</button>
     <p id="storedValue"></p>
-    <!-- <p id="status"></p> -->
     <form action="/backmain" method="post">
-        <!-- <input type="submit" value="Main"> -->
+        <input type="hidden" name="role" value="{{role}}">
+        <input type="hidden" name="q" value="{{r}}">
         <button class="btn">Main Menu</button>
     </form>
     </div>

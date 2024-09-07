@@ -62,22 +62,24 @@
 
 <body>
 <div class="container">
-<h1>Hi {{r}} ! Welcome to DApp - Smartpay</h1>
+<h1>Hi {{role}} {{r}}!</h1>
+<h1>Welcome to Smartpay!</h1>
 <br>
 <form action = "/store_money" method="post">
-    <!-- <input type="submit" value="Store Money"> -->
+    <input type="hidden" name="role" value="{{role}}">
+    <input type="hidden" name="q" value="{{r}}">
     <button class="btn">Store Money</button>
 </form>
 <form action = "/transfer_money" method="post">
-    <!-- <input type="submit" value="Transfer Money"> -->
+    <input type="hidden" name="role" value="{{role}}">
+    <input type="hidden" name="q" value="{{r}}">
     <button class="btn">Transfer Money</button>
 </form> 
-<form action = "/admin" method="post">
-    <!-- <input type="submit" value="Transfer Money"> -->
-    <button class="btn">Admin</button>
+<form action = "/role" method="post">
+    <input type="hidden" name="q" value="{{r}}">
+    <button class="btn">Change Role Enter</button>
 </form>
 <form action = "/" method="post">
-    <!-- <input type="submit" value="Transfer Money"> -->
     <button class="btn">Logout</button>
 </form>
 </div>
