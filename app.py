@@ -18,7 +18,7 @@ def main():
     role = request.form.get("role")
     r = request.form.get("q")
     current_time = datetime.datetime.now()
-    conn = sqlite3.connect('user.db')
+    conn = sqlite3.connect('dapp.db')
     c = conn.cursor()
     c.execute("insert into user values (?, ?, ?)", (role, r, current_time))
     conn.commit()
